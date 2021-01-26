@@ -6,10 +6,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FPLTesteSuite {
 	
-	static WebDriver driver = new ChromeDriver();
+	WebDriver driver = new ChromeDriver();
 	WebDriverWait wait = new WebDriverWait(driver, 10);
 	
-	public static void abrirURL(String ambiente) {
+	public  FPLTesteSuite() {
+		
+		System.setProperty("webdriver.gecko.driver", "geckodriver");
+		driver = new FirefoxDriver();
+	    	wait = new WebDriverWait(driver, 10);
+	}
+	
+	public  void abrirURL(String ambiente) {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
 		driver.get(ambiente);
