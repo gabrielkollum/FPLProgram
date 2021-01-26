@@ -66,7 +66,7 @@ public class Dashboard extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				try {
-				principal.FPLTesteSuite(LabelAmbiente.getText(), LabelUsuario.getText(), LabelSenha.getText());
+				principal.executarFPLTesteSuite(LabelAmbiente.getText(), LabelUsuario.getText(), LabelSenha.getText());
 				}catch(Exception ex) {
 					textAreaMensagem.setText(ex.getMessage());
 				}
